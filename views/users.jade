@@ -1,0 +1,9 @@
+extends layout
+block content
+    h1= title
+    ul
+    each u in users
+        li= u.title
+    form(action='/users', method='post')
+        input(type='text', name='user[title]')
+        input(type='submit', value='Save')
